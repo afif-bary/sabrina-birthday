@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #1e293b, #0b1020);
+  font-family: "Poppins", sans-serif;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 520px;
+  padding: 45px 30px;
+  border-radius: 22px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 10px 40px rgba(0,0,0,0.45);
+  backdrop-filter: blur(12px);
+
+  animation: popIn 0.9s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.title {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #ffffffcc;
+  letter-spacing: 1px;
+}
+
+.name {
+  margin: 10px 0 15px;
+  font-family: "Great Vibes", cursive;
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: #ff4d88;
+  text-shadow: 0px 0px 20px rgba(255, 77, 136, 0.4);
+}
+
+.msg {
+  margin: 0 0 25px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #fff;
+}
+
+/* BUTTON */
+.btn {
+  border: none;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, #ff2d7a, #ff5ca2);
+  box-shadow: 0px 8px 25px rgba(255, 45, 122, 0.35);
+  transition: 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 30px rgba(255, 45, 122, 0.5);
+}
+
+/* Surprise section */
+.surprise {
+  margin-top: 22px;
+  padding: 18px 16px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.25);
+  color: white;
+  animation: fadeUp 0.6s ease;
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(12px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.hidden {
+  display: none;
+}
+
+.ending {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffd1e1;
+}
+
+.from {
+  margin-top: 22px;
+  font-size: 0.95rem;
+  color: #ffb6c1;
+}
+
+/* Floating hearts */
+.hearts span {
+  position: absolute;
+  bottom: -50px;
+  font-size: 22px;
+  opacity: 0.7;
+  animation: floatUp 8s linear infinite;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0) rotate(0deg); opacity: 0; }
+  to { transform: translateY(-120vh) rotate(360deg); opacity: 1; }
+}
+
+/* Different positions & speeds */
+.hearts span:nth-child(1) { left: 10%; animation-duration: 7s; }
+.hearts span:nth-child(2) { left: 20%; animation-duration: 9s; font-size: 18px; }
+.hearts span:nth-child(3) { left: 35%; animation-duration: 8s; font-size: 26px; }
+.hearts span:nth-child(4) { left: 50%; animation-duration: 10s; font-size: 20px; }
+.hearts span:nth-child(5) { left: 65%; animation-duration: 7.5s; font-size: 28px; }
+.hearts span:nth-child(6) { left: 75%; animation-duration: 9.5s; font-size: 22px; }
+.hearts span:nth-child(7) { left: 85%; animation-duration: 8.5s; font-size: 24px; }
+.hearts span:nth-child(8) { left: 90%; animation-duration: 11s; font-size: 20px; }
+.hearts span:nth-child(9) { left: 42%; animation-duration: 8.2s; font-size: 25px; }
+.hearts span:nth-child(10){ left: 58%; animation-duration: 9.2s; font-size: 21px; }
